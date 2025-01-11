@@ -1,4 +1,6 @@
-export const db = [
+import type { Guitar } from '../index';
+
+export const db : Guitar[] = [
     {
         id: 1,
         name: 'Lukather',
