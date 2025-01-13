@@ -1,3 +1,4 @@
+// asegurtando el dia
 import { useCart } from "./hooks/useCart";
 
 import Header from "./components/Header";
