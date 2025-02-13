@@ -6,28 +6,18 @@ import { useCart } from "./hooks/useCart";
 import { cartReducer, initialState } from "./reducers/cart-reducer";
 
 function App() {
-  const {
-    cart,
-    removeFromCart,
-    incrementQuantity,
-    decrementQuantity,
-    clearCart,
-    isEmpty,
-    cartTotal,
-  } = useCart();
+  const { incrementQuantity, decrementQuantity, clearCart } = useCart();
 
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   return (
     <>
       <Header
-        cart={cart}
-        removeFromCart={removeFromCart}
+        cart={state.cart}
+        dispatch={dispatch}
         incrementQuantity={incrementQuantity}
         decrementQuantity={decrementQuantity}
         clearCart={clearCart}
-        isEmpty={isEmpty}
-        cartTotal={cartTotal}
       />
 
       <main className="container-xl mt-5">
