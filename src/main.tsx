@@ -4,7 +4,6 @@ import App from "./App.js";
 
 import "./index.css";
 
-// comentario
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
